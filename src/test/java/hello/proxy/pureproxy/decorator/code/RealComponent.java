@@ -8,6 +8,6 @@ public class RealComponent implements Component {
     @Override
     public String operator() {
         log.info("RealComponent 실행");
-        return "RealComponent";
+        return "Data";
     }
 }

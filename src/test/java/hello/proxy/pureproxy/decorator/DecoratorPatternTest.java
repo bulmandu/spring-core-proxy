@@ -2,10 +2,18 @@ package hello.proxy.pureproxy.decorator;
 
 import hello.proxy.pureproxy.decorator.code.Component;
 import hello.proxy.pureproxy.decorator.code.DecoratorPatternClient;
+import hello.proxy.pureproxy.decorator.code.MessageDecorator;
 import hello.proxy.pureproxy.decorator.code.RealComponent;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 
+import javax.crypto.MacSpi;
+
+/**
+ * Decorator Pattern
+ *  => 프록시로 부가기능을 추가한다.
+ *  ex) 요청, 응답값을 중간에 변형, 추가로그
+ */
 @Slf4j
 public class DecoratorPatternTest {
 
@@ -15,4 +23,14 @@ public class DecoratorPatternTest {
         DecoratorPatternClient client = new DecoratorPatternClient(realComponent);
         client.execute();
     }
+
+    @Test
+    void decorator1(){
+        Component realComponent = new RealComponent();
+        Component messageDecorator = new MessageDecorator(realComponent);
+        DecoratorPatternClient client = new DecoratorPatternClient(messageDecorator);
+        client.execute();
+    }
+
+
 }

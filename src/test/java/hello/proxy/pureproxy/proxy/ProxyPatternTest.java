@@ -5,6 +5,10 @@ import hello.proxy.pureproxy.proxy.code.ProxyPatternClient;
 import hello.proxy.pureproxy.proxy.code.RealSubject;
 import org.junit.jupiter.api.Test;
 
+/**
+ * Proxy Pattern
+ * => 프록시로 접근제어 한다.
+ */
 public class ProxyPatternTest {
 
     @Test
