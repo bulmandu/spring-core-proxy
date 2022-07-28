@@ -38,5 +38,4 @@ public class DecoratorPatternTest {
         client.execute();
     }
 
-
 }
